@@ -1,0 +1,22 @@
+package com.Links;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TSRTC_Homepage_DisplayLinkName {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver;
+		
+		System.setProperty("webdriver.chrome.driver","./Browsers/chromedriver.exe");
+		driver=new ChromeDriver();
+		
+		String applicationUrlAddress="https://www.google.com/search?q=tsrtc&rlz=1C1CHBD_enIN1079IN1079&oq=tsrtc&gs_lcrp=EgZjaHJvbWUqCQgAECMYJxiKBTIJCAAQIxgnGIoFMhMIARAuGIMBGMcBGLEDGNEDGIAEMg0IAhAAGIMBGLEDGIAEMgoIAxAAGLEDGIAEMgoIBBAAGLEDGIAEMg0IBRAAGIMBGLEDGIAEMgcIBhAAGIAEMgQIBxAF0gEINDc1N2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8";
+		
+		
+
+	}
+
+}

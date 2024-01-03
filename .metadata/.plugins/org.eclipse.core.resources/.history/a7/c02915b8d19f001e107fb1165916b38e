@@ -1,0 +1,104 @@
+package com.OHRM;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class OHRM_AddEmployeeTest {
+	
+	WebDriver driver;
+	
+	public void applicationLaunch()
+	{
+		driver=new ChromeDriver();
+		
+		//Maximize the Browser
+		driver.manage().window().maximize();
+		
+		String applicationUrlAddress="http://127.0.0.1/orangehrm-4.2.0.1/symfony/web/index.php/auth/login";
+		driver.get(applicationUrlAddress);
+		
+	}
+	public void logInTest()
+	{
+		String userNameTestData="Admin";
+		By userNameProperty=By.id("txtUsername");
+		
+	WebElement userName=driver.findElement(userNameProperty);
+	userName.sendKeys(userNameTestData);
+	
+	String passwordNameTestData="Livetech@123";
+	By passwordNameProperty=By.name("txtPassword");
+	
+	WebElement passwordName=driver.findElement(passwordNameProperty);
+	passwordName.sendKeys(passwordNameTestData);
+	
+	By logInButtonProperty=By.className("button");
+    WebElement logInButton=driver.findElement(logInButtonProperty);
+    logInButton.click();
+	
+	}
+	public void pimTest()
+	{
+		By pimProperty=By.id("menu_pim_viewPimModule");
+		WebElement pim=driver.findElement(pimProperty);
+		
+		Actions pimAction=new Actions(driver);
+		pimAction.moveToElement(pim).build().perform();
+		}
+	public void pimAddEmployeeTest()
+	{
+		By pimAddEmployeeProperty=By.id("menu_pim_addEmployee");
+		WebElement pimAddEmployee=driver.findElement(pimAddEmployeeProperty);
+		pimAddEmployee.click();
+	}
+	public void addNewEmployee()
+	{
+		String firstNameTestData="kalyani17";
+		//id="firstName"
+		By firstNameProperty=By.id("firstName");
+		WebElement firstName=driver.findElement(firstNameProperty);
+		firstName.sendKeys(firstNameTestData);
+		
+		String middlenameTestData="Devi123";
+		//id="middleName"
+		
+		By middleNameProperty=By.id("middleName");
+		WebElement middleName=driver.findElement(middleNameProperty);
+		middleName.sendKeys(middlenameTestData);
+		
+		String lastNameTestData="1117";
+		//id="lastName"
+		
+		By lastNameProperty=By.id("lastName");
+		WebElement lastName=driver.findElement(lastNameProperty);
+		lastName.sendKeys(lastNameTestData);
+		
+		//id="employeeId"
+		By employeeIdProperty=By.id("employeeId");
+		WebElement employeeId=driver.findElement(employeeIdProperty);
+		 String expected_Employeeld=employeeId.getAttribute("value");
+		 System.out.println("The EmployeeId is:-"+expected_Employeeld);
+		 
+		 
+		// id="btnSave"
+		By saveButtonProperty=By.id("btnSave");
+		WebElement saveButton=driver.findElement(saveButtonProperty);
+		saveButton.click();
+		
+		
+	}
+	public static void main(String[] args) {
+		OHRM_AddEmployeeTest addEmployeeTest=new OHRM_AddEmployeeTest();
+		addEmployeeTest.applicationLaunch();
+		addEmployeeTest.logInTest();
+		addEmployeeTest.pimTest();
+		addEmployeeTest.pimAddEmployeeTest();
+		addEmployeeTest.addNewEmployee();
+		
+		
+	}
+
+}

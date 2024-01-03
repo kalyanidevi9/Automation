@@ -1,0 +1,23 @@
+package com.Links;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TSRTC_HomePage_Links {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver;
+		
+		System.setProperty("webdriver.chrome.driver","./Browsers/chromedriver.exe");
+		driver=new ChromeDriver();
+		
+		String applicationUrlAddress="https://www.google.com/search?q=tsrtc+online&sca_esv=579719297&rlz=1C1CHBD_enIN1079IN1079&ei=6HpIZYCcLqnf2roPwOiSgA8&oq=tsrtc&gs_lp=Egxnd3Mtd2l6LXNlcnAiBXRzcnRjKgIIADIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYigUYsAMYQzIKEAAYigUYsAMYQzIKEAAYigUYsAMYQzIKEAAYigUYsAMYQzIOEAAY5AIY1gQYsAPYAQEyDhAAGOQCGNYEGLAD2AEBMhYQLhiKBRjHARjRAxjIAxiwAxhD2AECMhYQLhiKBRjHARjRAxjIAxiwAxhD2AECMhYQLhiKBRjHARjRAxjIAxiwAxhD2AECMhYQLhiKBRjHARjRAxjIAxiwAxhD2AECSKoxUABYAHABeAGQAQCYAQCgAQCqAQC4AQHIAQDiAwQYACBBiAYBkAYSugYGCAEQARgJugYGCAIQARgI&sclient=gws-wiz-serp";
+	    driver.get(applicationUrlAddress);
+		
+
+	}
+
+}

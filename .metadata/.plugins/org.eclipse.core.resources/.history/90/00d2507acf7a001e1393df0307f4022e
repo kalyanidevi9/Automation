@@ -1,0 +1,41 @@
+package com.Arrays;
+
+public class singlnDimensionalArray {
+
+	private static int arrayindex;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//date Type arrayName[]=new date Type[size];
+		
+      int array1[]=new int[3];
+      
+      array1[0]=20;
+      array1[1]=30;
+      array1[2]=40;
+      
+      
+	/*  System.out.println(array1[0]);
+	  System.out.println(array1[1]);
+	  System.out.println(array1[2]);
+	 */
+      
+     // for(int arraylndex=0;arraylndex<4;arraylndex++);
+      for(int arraylndex=0;arraylndex<array1.length;arraylndex++)
+    	  
+      {
+      System.out.println(array1[arrayindex]);
+	  
+      }	
+	}
+
+
+}
+
+
+
+
+
+
+

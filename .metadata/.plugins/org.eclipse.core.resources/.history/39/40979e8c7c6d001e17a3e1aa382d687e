@@ -1,0 +1,23 @@
+package com.stringcomparison;
+
+public class stringcompareExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String string1="LiveTech";
+		String string2="LiveTech";
+		
+		if(string1.equals(string2))
+		{
+			System.out.println("string2 variable value is equal to string1 variable value");
+		}
+		else
+		{
+			System.out.println("string2 variable value is NOT equal to string1 variable value");
+		}
+		
+		
+		
+	}
+
+}
